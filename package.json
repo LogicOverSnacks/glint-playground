@@ -1,8 +1,7 @@
 {
   "name": "glint-playground",
   "scripts": {
-    "build": "npm run build:glint && npm run copy",
-    "build:glint": "cd ../git-glint/angular && npm run build:playground",
-    "copy": "node ./scripts/copy.mjs"
+    "copy:github": "node ./scripts/copy.mjs \"../angular/dist\"",
+    "copy": "node ./scripts/copy.mjs \"../git-glint/angular/dist\""
   }
 }
