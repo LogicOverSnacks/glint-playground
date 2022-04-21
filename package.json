@@ -2,8 +2,7 @@
   "name": "glint-playground",
   "scripts": {
     "build": "npm run build:glint && npm run copy",
-    "build:glint": "cd glint/angular && npm run build:playground",
-    "copy": "node ./scripts/copy.mjs",
-    "install": "cd glint/angular && npm ci"
+    "build:glint": "cd ../git-glint/angular && npm run build:playground",
+    "copy": "node ./scripts/copy.mjs"
   }
 }
