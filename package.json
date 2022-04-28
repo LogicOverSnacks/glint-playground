@@ -1,7 +1,15 @@
 {
   "name": "glint-playground",
+  "private": true,
   "scripts": {
-    "copy:github": "node ./scripts/copy.mjs \"../angular/dist\"",
-    "copy": "node ./scripts/copy.mjs \"../git-glint/angular/dist\""
+    "copy": "node ./scripts/copy.mjs \"../git-glint/angular/dist\"",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "node-git-server": "~1.0.0-beta.30"
+  },
+  "engines": {
+    "node": "= 16.x"
   }
 }
