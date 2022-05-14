@@ -13,6 +13,10 @@ const repos = new Server(path.normalize(path.resolve(__dirname, 'repos')), {
 repos.on('push', push => push.reject());
 repos.on('tag', tag => tag.reject());
 
+// only for development
+// const cors = require('cors');
+// app.use(cors());
+
 app.use(express.static(path.resolve(__dirname, 'docs')));
 
 app.use('/git', (req, res) => repos.handle(req, res));
