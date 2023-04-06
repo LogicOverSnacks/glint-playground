@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "copy": "node ./scripts/copy.mjs \"../git-glint/angular/dist\"",
-    "start": "node index.js"
+    "fetch": "cd repos/glint-tensor-repo.git && git fetch",
+    "start": "npm run fetch && node index.js"
   },
   "dependencies": {
     "express": "^4.18.0",
