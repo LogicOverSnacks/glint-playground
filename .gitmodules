@@ -1,3 +1,0 @@
-[submodule "glint-tensor-repo"]
-	path = repos/glint-tensor-repo.git
-	url = https://github.com/LogicOverSnacks/glint-tensor-repo.git
