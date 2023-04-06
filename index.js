@@ -6,8 +6,8 @@ const app = express();
 const port = parseInt(process.env.PORT ?? 8080);
 
 const repos = new Server(path.normalize(path.resolve(__dirname, 'repos')), {
-  autoCreate: true,
-  checkout: true
+  autoCreate: false,
+  checkout: false
 });
 
 repos.on('push', push => push.reject());
