@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "copy": "node ./scripts/copy.mjs \"../git-glint/angular/dist\"",
-    "fetch": "cd repos && git clone --mirror https://github.com/LogicOverSnacks/glint-tensor-repo.git glint-tensor-repo.git/.git && cd glint-tensor-repo.git && git config --bool core.bare false && git checkout main",
-    "start": "npm run fetch && node index.js"
+    "fetch:tensor-repo": "cd repos && rm -rf glint-tensor-repo.git && git clone https://github.com/LogicOverSnacks/glint-tensor-repo.git glint-tensor-repo.git && cd glint-tensor-repo.git && git fetch && git checkout feat/contraction && git checkout feat/matrix-class && git checkout feat/dot-product && git checkout feature/tensor && git checkout feature/npm && git checkout main",
+    "start": "npm run fetch:tensor-repo && node index.js"
   },
   "dependencies": {
     "express": "^4.18.0",
